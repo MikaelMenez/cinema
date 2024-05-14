@@ -12,49 +12,150 @@ const Ano2020=document.getElementById("Ano2020");
 const prox2=document.getElementById("prox2");
 const gen=document.getElementById("genero");
 const ano=document.getElementById("anos");
-const GeneroComedia=document.getElementById("GeneroComedia");
+const GeneroComédia=document.getElementById("GeneroComédia");
 const imagem=document.getElementById("imagem");
+const reset=document.getElementById("reset");
 let genero;
 let anos;
 prox1.onclick=function(){
     if(GeneroRomance.checked){
-        genero='Romance';
+        genero='romance';
     }
     else if(GeneroAcao.checked){
-        genero='Acao';
+        genero='acao';
     }
     else if(GeneroAventura.checked){
-        genero='Aventura';
+        genero='aventura';
     }
     else if(GeneroTerror.checked){
-        genero='Terror';
+        genero='terror';
     }
-    else if(GeneroComedia.checked){
+    else if(GeneroComédia.checked){
         genero='comédia';
     }
     console.log(genero)
     gen.style.display="none"
     ano.style.display="inline-block"
+    ano.style.padding='15%'
 }
 prox2.onclick=function(){
     if(Anos70.checked){
-        genero='Anos70';
+        anos='Anos70';
     }
     else if(Anos80.checked){
-        genero='Anos80';
+        anos='Anos80';
     }
     else if(Anos90.checked){
-        genero='Anos90';
+        anos='Anos90';
     }
     else if(Ano2000.checked){
-        genero='Ano2000';
+        anos='Ano2000';
     }
     else if(Ano2010.checked){
-        genero='Ano2010';
+        anos='Ano2010';
     }
     else if(Ano2020.checked){
-        genero='Ano2020';
+        anos='Ano2020';
     }
-    console.log(genero)
+    console.log(anos)
     ano.style.display="none"
+    if(genero=='romance' && anos=='Anos70'){
+        imagem.src="/poster/Grease.jpg"
+    }
+    else if(genero=='romance' && anos=='Anos80'){
+        imagem.src="/poster/Ritmo_quente.jpeg"
+    }
+    else if(genero=='romance' && anos=='Anos90'){
+        imagem.src="/poster/forrest_gump.jpg"
+    }
+    else if(genero=='romance' && anos=='Ano2000'){
+        imagem.src="/poster/orgulho_e_preconceito.jpg"
+    }
+    else if(genero=='romance' && anos=='Ano2010'){
+        imagem.src="/poster/um_dia.jpg"
+    }
+    else if(genero=='romance' && anos=='Ano2020'){
+        imagem.src="/poster/por_lugares_incriveis.jpg"
+    }
+    else if(genero=='comédia' && anos=='Anos70'){
+        imagem.src="/poster/a_fantastica_fabrica_de_chocolate.jpg"
+    }
+    else if(genero=='comédia' && anos=='Anos80'){
+        imagem.src="/poster/curtindo_a_vida_adoidado.jpeg"
+    }
+    else if(genero=='comédia' && anos=='Anos90'){
+        imagem.src="/poster/debi_e_loide.webp"
+    }
+    else if(genero=='comédia' && anos=='Ano2000'){
+        imagem.src="/poster/Superbad.webp"
+    }
+    else if(genero=='comédia' && anos=='Ano2010'){
+        imagem.src="/poster/o_que_fazemos_nas_sombras.jpg"
+    }
+    else if(genero=='comédia' && anos=='Ano2020'){
+        imagem.src="/poster/borat.jpg"
+    }
+    else if(genero=='terror' && anos=='Anos70'){
+        imagem.src="/poster/exorcista.jpg"
+    }
+    else if(genero=='terror' && anos=='Anos80'){
+        imagem.src="/poster/enigma_de_outro_mundo.jpg"
+    }
+    else if(genero=='terror' && anos=='Anos90'){
+        imagem.src="/poster/panico.webp"
+    }
+    else if(genero=='terror' && anos=='Ano2000'){
+        imagem.src="/poster/donnie_darko.jpg"
+    }
+    else if(genero=='terror' && anos=='Ano2010'){
+        imagem.src="/poster/nos.webp"
+    }
+    else if(genero=='terror' && anos=='Ano2020'){
+        imagem.src="/poster/x.jpg"
+    }
+    else if(genero=='aventura' && anos=='Anos70'){
+        imagem.src="/poster/star-wars.jpg"
+    }
+    else if(genero=='aventura' && anos=='Anos80'){
+        imagem.src="/poster/conta_comigo.jpg"
+    }
+    else if(genero=='aventura' && anos=='Anos90'){
+        imagem.src="/poster/mumia.webp"
+    }
+    else if(genero=='aventura' && anos=='Ano2000'){
+        imagem.src="/poster/o_auto_da_compadecida.jpg"
+    }
+    else if(genero=='aventura' && anos=='Ano2010'){
+        imagem.src="/poster/vingadores.jpg"
+    }
+    else if(genero=='aventura' && anos=='Ano2020'){
+        imagem.src="/poster/Enola_holmes.webp"
+    }
+    else if(genero=='acao' && anos=='Anos70'){
+        imagem.src="/poster/Superman.webp"
+    }
+    else if(genero=='acao' && anos=='Anos80'){
+        imagem.src="/poster/exterminador_do_futuro.jpg"
+    }
+    else if(genero=='acao' && anos=='Anos90'){
+        imagem.src="/poster/clube_da_luta.webp"
+    }
+    else if(genero=='acao' && anos=='Ano2000'){
+        imagem.src="/poster/bastardos.webp"
+    }
+    else if(genero=='acao' && anos=='Ano2010'){
+        imagem.src="/poster/mad_max.webp"
+    }
+    else if(genero=='acao' && anos=='Ano2020'){
+        imagem.src="/poster/Top_Gun_Maverick.jpg"
+    }
+    reset.style.display="inline-block"
+    imagem.style.display="inline-block"
+}
+reset.onclick=function(){
+    anos='';
+    genero='';
+    reset.style.display="none"
+    gen.style.display="inline-block"
+    imagem.style.display="none"
 }
